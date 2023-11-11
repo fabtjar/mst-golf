@@ -4,7 +4,7 @@ import { RouterOutlet } from '@angular/router';
 import { SocketService } from './socket.service';
 
 type Player = {
-  MSTID: string,
+  MSTID: number,
   Match: number,
   First: string,
   Last: string,
@@ -85,13 +85,14 @@ type Player = {
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  players: Player[] = []
+  players: Player[] = [];
   socket = inject(SocketService);
   
   constructor() {
-    this.socket.onDataUpdate.subscribe(data => {
-      console.log(data);
-      this.players.push(data);
+    this.socket.onDataUpdate.subscribe((player: Player) => {
+      let index = this.players.findIndex(p => p.MSTID === player.MSTID);
+      if (index < 0) index = this.players.length;
+      this.players[index] = player;
     });
   }
 }
