@@ -1,148 +1,54 @@
 <table border="1">
   <tr>
-    <th>MSTID</th>
     <th>Match</th>
     <th>First</th>
     <th>Last</th>
     <th>Nationality</th>
-    <th>SOD</th>
     <th>Score</th>
     <th>Today</th>
-    <th>Hole1Strokes</th>
-    <th>Hole1STP</th>
-    <th>Hole2Strokes</th>
-    <th>Hole2STP</th>
-    <th>Hole3Strokes</th>
-    <th>Hole3STP</th>
-    <th>Hole4Strokes</th>
-    <th>Hole4STP</th>
-    <th>Hole5Strokes</th>
-    <th>Hole5STP</th>
-    <th>Hole6Strokes</th>
-    <th>Hole6STP</th>
-    <th>Hole7Strokes</th>
-    <th>Hole7STP</th>
-    <th>Hole8Strokes</th>
-    <th>Hole8STP</th>
-    <th>Hole9Strokes</th>
-    <th>Hole9STP</th>
     <th>OutStrokes</th>
     <th>OutSTP</th>
-    <th>Hole10Strokes</th>
-    <th>Hole10STP</th>
-    <th>Hole11Strokes</th>
-    <th>Hole11STP</th>
-    <th>Hole12Strokes</th>
-    <th>Hole12STP</th>
-    <th>Hole13Strokes</th>
-    <th>Hole13STP</th>
-    <th>Hole14Strokes</th>
-    <th>Hole14STP</th>
-    <th>Hole15Strokes</th>
-    <th>Hole15STP</th>
-    <th>Hole16Strokes</th>
-    <th>Hole16STP</th>
-    <th>Hole17Strokes</th>
-    <th>Hole17STP</th>
-    <th>Hole18Strokes</th>
-    <th>Hole18STP</th>
     <th>InStrokes</th>
     <th>InSTP</th>
     <th>TotalStrokes</th>
     <th>TotalSTP</th>
-    <th>tournamentID</th>
     <th>round</th>
     <th>orderInMatch</th>
     <th>lastUpdated</th>
-    <th>status</th>
-    <th>leaderboardID</th>
     <th>teeStart</th>
     <th>teeTime</th>
     <th>holesPlayed</th>
     <th>course</th>
-    <th>matchID</th>
-    <th>Amature</th>
-    <th>isTeam</th>
     <th>CalculatedRankInteger</th>
     <th>position</th>
-    <th>UniquePosition</th>
     <th>TVName</th>
-    <th>Eastern</th>
     <th>Handicap</th>
-    <th>SortPriority</th>
     <th>Sex</th>
   </tr>
   <tr *ngFor="let player of players">
-    <td>{{ player.MSTID }}</td>
     <td>{{ player.Match }}</td>
     <td>{{ player.First }}</td>
     <td>{{ player.Last }}</td>
     <td>{{ player.Nationality }}</td>
-    <td>{{ player.SOD }}</td>
     <td>{{ player.Score }}</td>
     <td>{{ player.Today }}</td>
-    <td>{{ player.Hole1Strokes }}</td>
-    <td>{{ player.Hole1STP }}</td>
-    <td>{{ player.Hole2Strokes }}</td>
-    <td>{{ player.Hole2STP }}</td>
-    <td>{{ player.Hole3Strokes }}</td>
-    <td>{{ player.Hole3STP }}</td>
-    <td>{{ player.Hole4Strokes }}</td>
-    <td>{{ player.Hole4STP }}</td>
-    <td>{{ player.Hole5Strokes }}</td>
-    <td>{{ player.Hole5STP }}</td>
-    <td>{{ player.Hole6Strokes }}</td>
-    <td>{{ player.Hole6STP }}</td>
-    <td>{{ player.Hole7Strokes }}</td>
-    <td>{{ player.Hole7STP }}</td>
-    <td>{{ player.Hole8Strokes }}</td>
-    <td>{{ player.Hole8STP }}</td>
-    <td>{{ player.Hole9Strokes }}</td>
-    <td>{{ player.Hole9STP }}</td>
     <td>{{ player.OutStrokes }}</td>
     <td>{{ player.OutSTP }}</td>
-    <td>{{ player.Hole10Strokes }}</td>
-    <td>{{ player.Hole10STP }}</td>
-    <td>{{ player.Hole11Strokes }}</td>
-    <td>{{ player.Hole11STP }}</td>
-    <td>{{ player.Hole12Strokes }}</td>
-    <td>{{ player.Hole12STP }}</td>
-    <td>{{ player.Hole13Strokes }}</td>
-    <td>{{ player.Hole13STP }}</td>
-    <td>{{ player.Hole14Strokes }}</td>
-    <td>{{ player.Hole14STP }}</td>
-    <td>{{ player.Hole15Strokes }}</td>
-    <td>{{ player.Hole15STP }}</td>
-    <td>{{ player.Hole16Strokes }}</td>
-    <td>{{ player.Hole16STP }}</td>
-    <td>{{ player.Hole17Strokes }}</td>
-    <td>{{ player.Hole17STP }}</td>
-    <td>{{ player.Hole18Strokes }}</td>
-    <td>{{ player.Hole18STP }}</td>
     <td>{{ player.InStrokes }}</td>
     <td>{{ player.InSTP }}</td>
     <td>{{ player.TotalStrokes }}</td>
     <td>{{ player.TotalSTP }}</td>
-    <td>{{ player.tournamentID }}</td>
     <td>{{ player.round }}</td>
     <td>{{ player.orderInMatch }}</td>
     <td>{{ player.lastUpdated }}</td>
-    <td>{{ player.status }}</td>
-    <td>{{ player.leaderboardID }}</td>
     <td>{{ player.teeStart }}</td>
     <td>{{ player.teeTime }}</td>
     <td>{{ player.holesPlayed }}</td>
     <td>{{ player.course }}</td>
-    <td>{{ player.matchID }}</td>
-    <td>{{ player.Amature }}</td>
-    <td>{{ player.isTeam }}</td>
     <td>{{ player.CalculatedRankInteger }}</td>
     <td>{{ player.position }}</td>
-    <td>{{ player.UniquePosition }}</td>
     <td>{{ player.TVName }}</td>
-    <td>{{ player.Eastern }}</td>
     <td>{{ player.Handicap }}</td>
-    <td>{{ player.SortPriority }}</td>
     <td>{{ player.Sex }}</td>
   </tr>
 </table>
