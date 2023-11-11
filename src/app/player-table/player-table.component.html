@@ -23,29 +23,6 @@
       <th>Rank</th>
       <th>Handicap</th>
     </tr>
-    <tr *ngFor="let player of players">
-      <td>{{ player.TVName }}</td>
-      <td>{{ player.Nationality }}</td>
-      <td>{{ player.Sex }}</td>
-      <td>{{ player.round }}</td>
-      <td>{{ player.Score }}</td>
-      <td>{{ player.Today }}</td>
-      <td>{{ player.position }}</td>
-      <td>{{ player.OutStrokes }}</td>
-      <td>{{ player.OutSTP }}</td>
-      <td>{{ player.InStrokes }}</td>
-      <td>{{ player.InSTP }}</td>
-      <td>{{ player.TotalStrokes }}</td>
-      <td>{{ player.TotalSTP }}</td>
-      <td>{{ player.Match }}</td>
-      <td>{{ player.orderInMatch }}</td>
-      <td>{{ player.lastUpdated }}</td>
-      <td>{{ player.teeStart }}</td>
-      <td>{{ player.teeTime }}</td>
-      <td>{{ player.holesPlayed }}</td>
-      <td>{{ player.course }}</td>
-      <td>{{ player.CalculatedRankInteger }}</td>
-      <td>{{ player.Handicap }}</td>
-    </tr>
+    <tr app-player-row *ngFor="let player of players" [player]="player"></tr>
   </table>
   
