@@ -1,6 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
+import { SocketService } from './socket.service';
+
+type Player = {
+  MSTID: number;
+  First: string;
+  Last: string;
+  Nationality: string;
+}
 
 @Component({
   selector: 'app-root',
@@ -10,5 +18,13 @@ import { RouterOutlet } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'mst-golf';
+  players: Player[] = []
+  socket = inject(SocketService);
+  
+  constructor() {
+    this.socket.onDataUpdate.subscribe(data => {
+      console.log(data);
+      this.players.push(data);
+    });
+  }
 }
