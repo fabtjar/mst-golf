@@ -13,11 +13,11 @@ import { PlayerRowComponent } from '../player-row/player-row.component';
 })
 export class PlayerTableComponent {
   players: Player[] = [];
-  socket = inject(PlayerDataService);
+  playerData = inject(PlayerDataService);
   
   constructor() {
-    this.players = this.socket.getAllPlayers();
-    this.socket.onDataUpdate.subscribe((players: Player[]) => {
+    this.players = this.playerData.getAllPlayers();
+    this.playerData.onDataUpdate.subscribe((players: Player[]) => {
       this.players = players;
     });
   }
