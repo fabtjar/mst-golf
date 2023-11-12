@@ -26,7 +26,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr app-player-row *ngFor="let player of players" [player]="player"></tr>
+    <tr app-player-row *ngFor="let player of players" [player]="player" (click)="onClick(player)" class="player-row"></tr>
   </tbody>
 </table>
   
