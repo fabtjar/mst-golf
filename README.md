@@ -7,16 +7,16 @@ This application serves as a user interface for a golf tournament, providing a d
 
 ## Setup and Installation
 
-### Prerequisites:
+### Prerequisites
 - Ensure you have [Node.js](https://nodejs.org/) installed.
 - Angular CLI: Install it globally using `npm install -g @angular/cli`.
 
-### Clone the Repository:
+### Clone the Repository
 - Use `git clone https://github.com/fabtjar/mst-golf.git` to clone the project repository.
 
-### Install Dependencies:
+### Install Dependencies
 - Navigate to the project directory and run `npm install`.
 
-## Running the Application:
+## Running the Application
 - Execute `ng serve` to start the development server.
 - Open http://localhost:4200/ in your browser to view the application.
