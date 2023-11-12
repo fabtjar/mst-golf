@@ -1,8 +1,7 @@
 <th scope="row">{{ player.MSTID }}</th>
 <td>
-  <a [routerLink]="['/player', player.MSTID]">
-    <img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/countries/500/{{ player.Nationality }}.png&w=40&h=40" alt="{{ player.Nationality }}">{{ player.TVName }}
-  </a>
+  <img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/countries/500/{{ player.Nationality }}.png&w=20&h=20" alt="{{ player.Nationality }}">
+  <span class="ms-2">{{ player.TVName }}</span>
 </td>
 <td>{{ player.Sex }}</td>
 <td>{{ player.round }}</td>
