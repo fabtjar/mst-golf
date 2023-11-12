@@ -19,8 +19,17 @@ export class PlayerDetailsComponent {
 
   constructor() {
     const id = Number(this.route.snapshot.params['id']);
+
     const player = this.playerData.getPlayerById(id);
-    if (player) this.player = player;
-    else this.router.navigate(['']);
+    if (player) {
+      this.player = player;
+    } else {
+      this.router.navigate(['']);
+      return;
+    }
+
+    this.playerData.onPlayerUpdate.subscribe(p => {
+      if (p.MSTID === this.player.MSTID) this.player = p;
+    });
   }
 }

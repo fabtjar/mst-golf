@@ -17,8 +17,6 @@ export class PlayerTableComponent {
   
   constructor() {
     this.players = this.playerData.getAllPlayers();
-    this.playerData.onDataUpdate.subscribe((players: Player[]) => {
-      this.players = players;
-    });
+    this.playerData.onPlayerUpdate.subscribe(() => this.players = this.playerData.getAllPlayers());
   }
 }

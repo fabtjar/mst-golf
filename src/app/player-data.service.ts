@@ -7,7 +7,7 @@ import { Player } from './player';
 })
 export class PlayerDataService {
   players: Player[] = [];
-  onDataUpdate = new EventEmitter<Player[]>();
+  onPlayerUpdate = new EventEmitter<Player>();
 
   constructor() {
     const socket = io('https://mst-full-stack-dev-test.herokuapp.com/');
@@ -17,7 +17,7 @@ export class PlayerDataService {
       if (index < 0) index = this.players.length;
       this.players[index] = player;
 
-      this.onDataUpdate.emit(this.players);
+      this.onPlayerUpdate.emit(player);
     });
   }
 
