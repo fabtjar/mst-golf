@@ -16,10 +16,9 @@ export class PlayerTableComponent {
   socket = inject(SocketService);
   
   constructor() {
-    this.socket.onDataUpdate.subscribe((player: Player) => {
-      let index = this.players.findIndex(p => p.MSTID === player.MSTID);
-      if (index < 0) index = this.players.length;
-      this.players[index] = player;
+    this.players = this.socket.getAllPlayers();
+    this.socket.onDataUpdate.subscribe((players: Player[]) => {
+      this.players = players;
     });
   }
 }
