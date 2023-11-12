@@ -1,27 +1,32 @@
-<table border="1">
+<table class="table table-striped table-hover">
+  <thead>
     <tr>
-      <th>Player</th>
-      <th>Sex</th>
-      <th>Round</th>
-      <th>Score</th>
-      <th>Today</th>
-      <th>Position</th>
-      <th>Out Strokes</th>
-      <th>Out STP</th>
-      <th>In Strokes</th>
-      <th>In STP</th>
-      <th>Total Strokes</th>
-      <th>Total STP</th>
-      <th>Match</th>
-      <th>Order In Match</th>
-      <th>Last Updated</th>
-      <th>Tee Start</th>
-      <th>Tee Time</th>
-      <th>Holes Played</th>
-      <th>Course</th>
-      <th>Rank</th>
-      <th>Handicap</th>
+      <th scope="col">#</th>
+      <th scope="col">Player</th>
+      <th scope="col">Sex</th>
+      <th scope="col">Round</th>
+      <th scope="col">Score</th>
+      <th scope="col">Today</th>
+      <th scope="col">Position</th>
+      <th scope="col">Out Strokes</th>
+      <th scope="col">Out STP</th>
+      <th scope="col">In Strokes</th>
+      <th scope="col">In STP</th>
+      <th scope="col">Total Strokes</th>
+      <th scope="col">Total STP</th>
+      <th scope="col">Match</th>
+      <th scope="col">Order In Match</th>
+      <th scope="col">Last Updated</th>
+      <th scope="col">Tee Start</th>
+      <th scope="col">Tee Time</th>
+      <th scope="col">Holes Played</th>
+      <th scope="col">Course</th>
+      <th scope="col">Rank</th>
+      <th scope="col">Handicap</th>
     </tr>
+  </thead>
+  <tbody>
     <tr app-player-row *ngFor="let player of players" [player]="player"></tr>
-  </table>
+  </tbody>
+</table>
   
