@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SocketService } from '../socket.service';
+import { PlayerDataService } from '../player-data.service';
 import { Player } from '../player';
 import { PlayerRowComponent } from '../player-row/player-row.component';
 
@@ -13,7 +13,7 @@ import { PlayerRowComponent } from '../player-row/player-row.component';
 })
 export class PlayerTableComponent {
   players: Player[] = [];
-  socket = inject(SocketService);
+  socket = inject(PlayerDataService);
   
   constructor() {
     this.players = this.socket.getAllPlayers();

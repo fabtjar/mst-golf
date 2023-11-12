@@ -5,7 +5,7 @@ import { Player } from './player';
 @Injectable({
   providedIn: 'root'
 })
-export class SocketService {
+export class PlayerDataService {
   players: Player[] = [];
   onDataUpdate = new EventEmitter<Player[]>();
 

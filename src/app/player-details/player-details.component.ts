@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
-import { SocketService } from '../socket.service';
+import { PlayerDataService } from '../player-data.service';
 import { Player } from '../player';
 
 @Component({
@@ -14,12 +14,12 @@ import { Player } from '../player';
 export class PlayerDetailsComponent {
   route = inject(ActivatedRoute);
   router = inject(Router);
-  socket = inject(SocketService);
+  playerData = inject(PlayerDataService);
   player!: Player;
 
   constructor() {
     const id = Number(this.route.snapshot.params['id']);
-    const player = this.socket.getPlayerById(id);
+    const player = this.playerData.getPlayerById(id);
     if (player) this.player = player;
     else this.router.navigate(['']);
   }
